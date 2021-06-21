@@ -5,6 +5,13 @@ using DG.Tweening;
 
 public class LeftSpaceShip : MonoBehaviour
 {
+    public enum MovePosition
+    {
+        LeftToRight, RightToLeft
+    }
+
+    private MovePosition movePos;
+
     private Touch touch;
     private Vector2 touchPosition;
 
@@ -23,32 +30,32 @@ public class LeftSpaceShip : MonoBehaviour
         if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
             touch = Input.touches[0];
-            Debug.Log("Left ship: " + touch.position);
 
             if (touch.position.x < 360)
             {
                 CheckPosition();
             }
         }
-
     }
 
+    /// <summary>
+    /// Función que se encarga de mover la nave
+    /// </summary>
     private void CheckPosition()
     {
-        if (isOnleft)
+        if (isOnleft) //SI esta en el carril izquierdo, se mueve hacia el derecho
         {
-            LeftToRight().Play();
-            //transform.position = rightPosition;
+            LeftToRight().Play(); //Secuencia que lo mueve de posicion
             isOnleft = false;
         }
-        else
+        else //Aqui al contrario, se mueve del izquierdo al derecho
         {
-            RightToLeft().Play();
-            //transform.position = leftPosition;
+            RightToLeft().Play(); //Secuencia que lo mueve de posicion
             isOnleft = true;
         }
     }
 
+    #region ANIMACIONES_DOTWEEN
     private Sequence LeftToRight()
     {
         Sequence seq = DOTween.Sequence();
@@ -84,4 +91,5 @@ public class LeftSpaceShip : MonoBehaviour
 
         return seq;
     }
+    #endregion
 }
