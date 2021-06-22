@@ -13,11 +13,12 @@ public class MeteorBehaviour : MonoBehaviour
     {
         transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = data.sprite;
         transform.GetChild(0).GetComponent<SpriteRenderer>().color = data.color;
+        transform.GetComponent<CircleCollider2D>().radius = data.radiusOfImpact;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector2.down * Speed * Time.deltaTime);
     }
 }

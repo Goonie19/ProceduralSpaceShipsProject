@@ -13,4 +13,6 @@ public class MeteorData : ScriptableObject
 
     public float RotationSpeed;
 
+    public float radiusOfImpact;
+
 }
