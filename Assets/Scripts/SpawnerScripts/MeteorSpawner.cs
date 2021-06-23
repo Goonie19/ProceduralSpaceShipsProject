@@ -6,12 +6,15 @@ using UnityEngine;
 public class MeteorSpawner : MonoBehaviour
 {
 
-    public List<Transform> LeftSpawns;
-    public List<Transform> RightSpawns;
+    public List<Transform> Spawns;
 
     public List<MeteorData> MeteorTypes;
 
+    public List<GameObject> pool;
+
     private List<MeteorPos> _meteorPositions;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,12 +38,119 @@ public class MeteorSpawner : MonoBehaviour
 
     void WhereToInstantiate()
     {
-        int leftLeft, leftRight, rightLeft, rightRight;
+        int[] positions = new int[4];
 
-        leftLeft = CountElements(MeteorPos.LeftLeft);
-        leftRight = CountElements(MeteorPos.LeftRight);
-        rightLeft = CountElements(MeteorPos.RightLeft);
-        rightRight = CountElements(MeteorPos.RightRight);
+        positions[0] = CountElements(MeteorPos.LeftLeft);
+        positions[1] = CountElements(MeteorPos.LeftRight);
+        positions[2] = CountElements(MeteorPos.RightLeft);
+        positions[3] = CountElements(MeteorPos.RightRight);
+
+        MeteorPos max = MeteorPos.LeftLeft;
+
+        int i = 0;
+
+        int maxElement = 0;
+        while(i < positions.Length -1)
+        {
+            if (positions[i] > maxElement)
+            {
+                maxElement = positions[i];
+
+                switch (i)
+                {
+                    case 0: 
+                        max = MeteorPos.LeftLeft;
+                        ;break;
+                    case 1:
+                        max = MeteorPos.LeftRight;
+                        ; break;
+                    case 2:
+                        max = MeteorPos.RightLeft;
+                        ; break;
+                    case 3:
+                        max = MeteorPos.RightRight;
+                        ; break;
+                    default:
+                        break;
+                }
+
+            }
+        }
+
+        GameObject o1, o2;
+
+        switch (max)
+        {
+            case MeteorPos.LeftLeft:
+                o1 = GetFreeObject();
+                o1.transform.position = Spawns[1].position;
+                o1.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+                o1.SetActive(true);
+                
+                o2 = GetFreeObject();
+                o2.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+                if (positions[2] > positions[3])
+                    o2.transform.position = Spawns[3].position;
+                else
+                    o2.transform.position = Spawns[2].position;
+
+                o2.SetActive(true);
+
+                break;
+            case MeteorPos.LeftRight:
+
+                o1 = GetFreeObject();
+                o1.transform.position = Spawns[0].position;
+                o1.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+                o1.SetActive(true);
+                
+                o2 = GetFreeObject();
+                o2.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+                if (positions[2] > positions[3])
+                    o2.transform.position = Spawns[3].position;
+                else
+                    o2.transform.position = Spawns[2].position;
+
+                o2.SetActive(true);
+
+                break;
+            case MeteorPos.RightLeft:
+
+                o1 = GetFreeObject();
+                o1.transform.position = Spawns[3].position;
+                o1.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+                o1.SetActive(true);
+
+                o2 = GetFreeObject();
+                o2.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+                if (positions[0] > positions[1])
+                    o2.transform.position = Spawns[1].position;
+                else
+                    o2.transform.position = Spawns[0].position;
+
+                o2.SetActive(true);
+
+                break;
+            case MeteorPos.RightRight:
+
+                o1 = GetFreeObject();
+                o1.transform.position = Spawns[2].position;
+                o1.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+                o1.SetActive(true);
+
+                o2 = GetFreeObject();
+                o2.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+                if (positions[0] > positions[1])
+                    o2.transform.position = Spawns[1].position;
+                else
+                    o2.transform.position = Spawns[0].position;
+
+                o2.SetActive(true);
+
+                break;
+        }
+
+
     }
 
     int CountElements(MeteorPos pos)
@@ -55,4 +165,6 @@ public class MeteorSpawner : MonoBehaviour
 
         return cont;
     }
+
+    public GameObject GetFreeObject() { return pool.Find(item => item.activeInHierarchy == false); }
 }
