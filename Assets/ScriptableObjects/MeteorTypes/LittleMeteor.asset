@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: LittleMeteor
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: c14183ebb93ee594abe0546fa957753d, type: 3}
-  color: {r: 0.6981132, g: 0.4130172, b: 0.15477037, a: 0}
+  color: {r: 0.6981132, g: 0.4130172, b: 0.15477037, a: 1}
   RotationSpeed: 50
   radiusOfImpact: 0.26
