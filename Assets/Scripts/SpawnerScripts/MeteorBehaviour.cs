@@ -7,7 +7,14 @@ public class MeteorBehaviour : MonoBehaviour
 
     public MeteorData data;
 
-    public float Speed;
+    public float BaseSpeed;
+
+    private float _speed;
+
+    private void Start()
+    {
+        _speed = BaseSpeed;
+    }
 
     private void OnEnable()
     {
@@ -19,6 +26,12 @@ public class MeteorBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.down * Speed * Time.deltaTime);
+        transform.Translate(Vector2.down * _speed * Time.deltaTime);
+        
+    }
+
+    public void SetSpeed(float i)
+    {
+        _speed = i;
     }
 }

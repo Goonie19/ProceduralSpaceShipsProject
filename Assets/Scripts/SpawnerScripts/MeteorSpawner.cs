@@ -8,15 +8,17 @@ public class MeteorSpawner : MonoBehaviour
 
     public List<Transform> Spawns;
 
-    public float Speed;
+    public float SpeedSQRT;
 
     public List<MeteorData> MeteorTypes;
 
     public List<GameObject> pool;
 
-    [SerializeField] private List<MeteorPos> _meteorPositions;
+    private List<MeteorPos> _meteorPositions;
 
-    [SerializeField]private GameObject _actualObstacle1, _actualObstacle2;
+    private GameObject _actualObstacle1, _actualObstacle2;
+
+    private float _actualSpeed, _sqrtSpeed;
 
 
 
@@ -24,6 +26,8 @@ public class MeteorSpawner : MonoBehaviour
     void Start()
     {
         _meteorPositions = new List<MeteorPos>();
+        _actualSpeed = SpeedSQRT;
+        _sqrtSpeed = SpeedSQRT;
         InstantiateMeteor();
     }
 
@@ -35,7 +39,7 @@ public class MeteorSpawner : MonoBehaviour
 
     public void AddToPlayerPos(MeteorPos pos)
     {
-        if(_meteorPositions.Count >= 10)
+        if(_meteorPositions.Count >= 20)
             _meteorPositions.RemoveAt(0);
 
         _meteorPositions.Add(pos);
@@ -43,6 +47,8 @@ public class MeteorSpawner : MonoBehaviour
 
     public void InstantiateMeteor()
     {
+
+        SpeedUp();
 
        if(_meteorPositions.Count >= 10)
         {
@@ -97,15 +103,15 @@ public class MeteorSpawner : MonoBehaviour
             int r2 = UnityEngine.Random.Range(2, 4);
 
             _actualObstacle1 = GetFreeObject();
-            Debug.Log(r1);
-
             _actualObstacle1.transform.position = Spawns[r1].position;
             _actualObstacle1.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+            _actualObstacle1.GetComponent<MeteorBehaviour>().SetSpeed(_actualSpeed );
             _actualObstacle1.SetActive(true);
 
             _actualObstacle2 = GetFreeObject();
             _actualObstacle2.transform.position = Spawns[r2].position;
             _actualObstacle2.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+            _actualObstacle2.GetComponent<MeteorBehaviour>().SetSpeed(_actualSpeed );
             _actualObstacle2.SetActive(true);
 
             if (r1 == 0)
@@ -175,11 +181,13 @@ public class MeteorSpawner : MonoBehaviour
                 _actualObstacle1 = GetFreeObject();
                 _actualObstacle1.transform.position = Spawns[0].position;
                 _actualObstacle1.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+                _actualObstacle1.GetComponent<MeteorBehaviour>().SetSpeed(_actualSpeed);
                 AddToPlayerPos(MeteorPos.LeftLeft);
                 _actualObstacle1.SetActive(true);
 
                 _actualObstacle2 = GetFreeObject();
                 _actualObstacle2.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+                _actualObstacle2.GetComponent<MeteorBehaviour>().SetSpeed(_actualSpeed);
 
                 if (positions[2] > positions[3] && positions[2] - positions[3] >= 2)
                 {
@@ -217,11 +225,13 @@ public class MeteorSpawner : MonoBehaviour
                 _actualObstacle1 = GetFreeObject();
                 _actualObstacle1.transform.position = Spawns[3].position;
                 _actualObstacle1.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+                _actualObstacle1.GetComponent<MeteorBehaviour>().SetSpeed(_actualSpeed);
                 AddToPlayerPos(MeteorPos.RightRight);
                 _actualObstacle1.SetActive(true);
 
                 _actualObstacle2 = GetFreeObject();
                 _actualObstacle2.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+                _actualObstacle2.GetComponent<MeteorBehaviour>().SetSpeed(_actualSpeed);
 
 
                 if (positions[0] > positions[1] && positions[0] - positions[1] >= 2)
@@ -260,11 +270,13 @@ public class MeteorSpawner : MonoBehaviour
                 _actualObstacle1 = GetFreeObject();
                 _actualObstacle1.transform.position = Spawns[2].position;
                 _actualObstacle1.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+                _actualObstacle1.GetComponent<MeteorBehaviour>().SetSpeed(_actualSpeed );
                 AddToPlayerPos(MeteorPos.RightLeft);
                 _actualObstacle1.SetActive(true);
 
                 _actualObstacle2 = GetFreeObject();
                 _actualObstacle2.GetComponent<MeteorBehaviour>().data = MeteorTypes[UnityEngine.Random.Range(0, MeteorTypes.Count)];
+                _actualObstacle2.GetComponent<MeteorBehaviour>().SetSpeed(_actualSpeed );
 
                 if (positions[0] > positions[1] && positions[0] - positions[1] >= 2)
                 {
@@ -307,6 +319,13 @@ public class MeteorSpawner : MonoBehaviour
         }
 
         return cont;
+    }
+
+    void SpeedUp()
+    {
+        _sqrtSpeed = (Mathf.Sqrt(_sqrtSpeed));
+        _actualSpeed += _sqrtSpeed - 1;
+        Debug.Log(_actualSpeed);
     }
 
     public GameObject GetFreeObject() { return pool.Find(item => item.activeInHierarchy == false); }
