@@ -4159,9 +4159,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'GAME TITLE
-
-'
+  m_text: 2SPACES SHIPS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 561e6899570784646a636ca7247061ab, type: 2}
   m_sharedMaterial: {fileID: -3108129072837774134, guid: 561e6899570784646a636ca7247061ab,

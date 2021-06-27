@@ -92,4 +92,19 @@ public class LeftSpaceShip : MonoBehaviour
         return seq;
     }
     #endregion
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Star"))
+        {
+            ScoreManager.Instance.AddScore();
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.CompareTag("Meteor"))
+        {
+            ScoreManager.Instance.GameOver();
+            Destroy(collision.gameObject);
+        }
+    }
 }

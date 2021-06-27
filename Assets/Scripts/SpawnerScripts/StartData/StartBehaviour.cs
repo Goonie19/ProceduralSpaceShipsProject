@@ -10,14 +10,4 @@ public class StartBehaviour : MonoBehaviour
     {
         transform.Translate(Vector2.down * speed * Time.deltaTime);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-        if (collision.gameObject.CompareTag("SpaceShip"))
-        {
-            Debug.Log("Estrella cogida");
-            Destroy(gameObject);
-        }
-    }
 }
