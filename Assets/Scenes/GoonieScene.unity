@@ -529,14 +529,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b4c9e6801040044924dd8c16251fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftSpawns:
-  - {fileID: 11632495}
-  - {fileID: 1229120823}
-  RightSpawns:
-  - {fileID: 1643588807}
-  - {fileID: 1239929891}
+  Spawns: []
   MeteorTypes:
   - {fileID: 11400000, guid: a8b1aa0bf97e8cf49858f5833a6bcc7b, type: 2}
+  pool:
+  - {fileID: 1316203584}
+  - {fileID: 1389127464}
+  - {fileID: 144479477}
+  - {fileID: 1014949093}
+  - {fileID: 74247240}
+  - {fileID: 650653922}
+  - {fileID: 1258877257}
+  - {fileID: 1177837345}
+  - {fileID: 1263413897}
+  - {fileID: 956705644}
+  - {fileID: 1851740263}
 --- !u!1 &409987731
 GameObject:
   m_ObjectHideFlags: 0
