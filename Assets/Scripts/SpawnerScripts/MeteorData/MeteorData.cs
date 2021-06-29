@@ -15,4 +15,6 @@ public class MeteorData : ScriptableObject
 
     public float radiusOfImpact;
 
+    public bool obstacle;
+
 }

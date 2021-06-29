@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53b26018a8465394abdfe99276ea2dbf, type: 3}
-  m_Name: LittleMeteor
+  m_Name: Star
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: c14183ebb93ee594abe0546fa957753d, type: 3}
-  color: {r: 0.6981132, g: 0.4130172, b: 0.15477037, a: 1}
-  RotationSpeed: 50
+  sprite: {fileID: 21300000, guid: 108c9641948dc81449a5fe8a64d937cd, type: 3}
+  color: {r: 1, g: 0.99501103, b: 0, a: 0}
+  RotationSpeed: 0
   radiusOfImpact: 0.26
-  obstacle: 1
+  obstacle: 0
