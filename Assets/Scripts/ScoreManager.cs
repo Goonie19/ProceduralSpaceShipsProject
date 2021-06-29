@@ -27,13 +27,13 @@ public class ScoreManager : Singleton<ScoreManager>
     public void AddScore()
     {
         currentScore++;
-        currentScoreText.GetComponent<TextMeshProUGUI>().text = "X " + currentScore.ToString();
+        currentScoreText.GetComponent<TextMeshProUGUI>().text = "X  " + currentScore.ToString();
     }
 
     public void EraseCurrentScore()
     {
         currentScore = 0;
-        currentScoreText.GetComponent<TextMeshProUGUI>().text = "X " + currentScore.ToString();
+        currentScoreText.GetComponent<TextMeshProUGUI>().text = "X  " + currentScore.ToString();
     }
 
     public void GameOver()
@@ -47,6 +47,6 @@ public class ScoreManager : Singleton<ScoreManager>
 
     public void SetFinalScoreText()
     {
-        finalScoreText.GetComponent<TextMeshProUGUI>().text = "SCORE: " + currentScore.ToString();
+        finalScoreText.GetComponent<TextMeshProUGUI>().text = "SCORE:  " + currentScore.ToString();
     }
 }

@@ -19,6 +19,7 @@ public class LeftSpaceShip : MonoBehaviour
     public float duration;
     private Vector3 flip = new Vector3(0f, 90f, 0f);
     public bool isOnleft = true;
+    public Transform posToSpawn;
 
     private void Start()
     {
@@ -96,15 +97,14 @@ public class LeftSpaceShip : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Star"))
-        {
-            ScoreManager.Instance.AddScore();
-            Destroy(collision.gameObject);
-        }
-        else if (collision.gameObject.CompareTag("Meteor"))
+        if (collision.GetComponent<MeteorBehaviour>().data.obstacle)
         {
             ScoreManager.Instance.GameOver();
-            Destroy(collision.gameObject);
+        }
+        else
+        {
+            ScoreManager.Instance.AddScore();
+            collision.gameObject.transform.position = posToSpawn.position;
         }
     }
 }

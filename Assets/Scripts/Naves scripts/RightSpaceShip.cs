@@ -94,15 +94,15 @@ public class RightSpaceShip : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Star"))
-        {
-            ScoreManager.Instance.AddScore();
-            Destroy(collision.gameObject);
-        }
-        else if (collision.gameObject.CompareTag("Meteor"))
+        if (collision.GetComponent<MeteorBehaviour>().data.obstacle)
         {
             ScoreManager.Instance.GameOver();
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
+        }
+        else
+        {
+            ScoreManager.Instance.AddScore();
+            collision.gameObject.SetActive(false);
         }
     }
 }

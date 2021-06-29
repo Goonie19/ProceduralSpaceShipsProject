@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f676496c09e7864384223ad006eafe9, type: 3}
-  m_Name: MeteorParameters
+  m_Name: Star
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 7df7522906763dc49812dfe13d6fd7ba, type: 3}
-  color: {r: 0.5188679, g: 0.33652988, b: 0.15419188, a: 1}
-  RotationSpeed: 5
+  sprite: {fileID: 21300000, guid: 2f1045951f52b4442ae45b17e25cdd74, type: 3}
+  color: {r: 1, g: 0.84313726, b: 0, a: 1}
+  RotationSpeed: 0
   radiusOfImpact: 0.35
+  obstacle: 0
