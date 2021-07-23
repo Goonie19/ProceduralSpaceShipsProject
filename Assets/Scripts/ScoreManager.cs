@@ -12,6 +12,8 @@ public class ScoreManager : Singleton<ScoreManager>
     public GameObject finalScoreText;
     public GameObject currentScoreText;
 
+    public TextMeshProUGUI storedScoreText;
+
     private void Start()
     {
         EraseCurrentScore();
@@ -22,6 +24,11 @@ public class ScoreManager : Singleton<ScoreManager>
     {
         storedScore += currentScore;
         PlayerPrefs.SetInt("Stored score", storedScore);
+    }
+
+    public void UpdateStoredScore()
+    {
+
     }
 
     public void AddScore()

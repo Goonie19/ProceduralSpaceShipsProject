@@ -14,6 +14,7 @@ public class LeftSpaceShip : MonoBehaviour
 
     private Touch touch;
     private Vector2 touchPosition;
+    private ParticleSystem _particleSystem;
 
     public Vector2 leftPosition, rightPosition;
     public float duration;
@@ -24,6 +25,7 @@ public class LeftSpaceShip : MonoBehaviour
     private void Start()
     {
         transform.position = leftPosition;
+        _particleSystem = GetComponentInChildren<ParticleSystem>();
     }
 
     void Update()
@@ -46,12 +48,16 @@ public class LeftSpaceShip : MonoBehaviour
     {
         if (isOnleft) //SI esta en el carril izquierdo, se mueve hacia el derecho
         {
+            _particleSystem.Stop();
             LeftToRight().Play(); //Secuencia que lo mueve de posicion
+            LeftToRight().OnComplete(() => _particleSystem.Play());
             isOnleft = false;
         }
         else //Aqui al contrario, se mueve del izquierdo al derecho
         {
+            _particleSystem.Stop();
             RightToLeft().Play(); //Secuencia que lo mueve de posicion
+            RightToLeft().OnComplete(() => _particleSystem.Play());
             isOnleft = true;
         }
     }

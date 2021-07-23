@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 41302749}
   - component: {fileID: 41302748}
   m_Layer: 5
-  m_Name: Ship D
+  m_Name: Ship F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 35de502a735f3d445b543c38c7397864, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4358245a836592940ae412f3f0a17a85, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 129144534}
   - component: {fileID: 129144533}
   - component: {fileID: 129144532}
+  - component: {fileID: 129144535}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -507,7 +508,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 129144533}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 129144535}
+        m_MethodName: CheckPurchase
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &129144533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,6 +557,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129144530}
   m_CullTransparentMesh: 0
+--- !u!114 &129144535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129144530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftShipPrefab: {fileID: 5634579150054830991, guid: 8aea87f1711af67489abf5d36d214660,
+    type: 3}
+  RightShipPrefab: {fileID: 8275600475488754385, guid: 3005854f4a4dbda4cad9420e8ca0e235,
+    type: 3}
+  shipToCharge: {fileID: 875213106}
 --- !u!1 &295069848
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +586,7 @@ GameObject:
   - component: {fileID: 295069852}
   - component: {fileID: 295069851}
   - component: {fileID: 295069850}
+  - component: {fileID: 295069853}
   m_Layer: 5
   m_Name: Button (4)
   m_TagString: Untagged
@@ -627,7 +657,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 295069851}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 295069853}
+        m_MethodName: CheckPurchase
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &295069851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,6 +706,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295069848}
   m_CullTransparentMesh: 0
+--- !u!114 &295069853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295069848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftShipPrefab: {fileID: 5634579150054830991, guid: 8aea87f1711af67489abf5d36d214660,
+    type: 3}
+  RightShipPrefab: {fileID: 8275600475488754385, guid: 3005854f4a4dbda4cad9420e8ca0e235,
+    type: 3}
+  shipToCharge: {fileID: 500384446}
 --- !u!1 &390023398
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +735,7 @@ GameObject:
   - component: {fileID: 390023402}
   - component: {fileID: 390023401}
   - component: {fileID: 390023400}
+  - component: {fileID: 390023403}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -747,7 +806,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 390023401}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 390023403}
+        m_MethodName: CheckPurchase
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &390023401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,6 +855,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390023398}
   m_CullTransparentMesh: 0
+--- !u!114 &390023403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390023398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftShipPrefab: {fileID: 5634579150054830991, guid: 8aea87f1711af67489abf5d36d214660,
+    type: 3}
+  RightShipPrefab: {fileID: 8275600475488754385, guid: 3005854f4a4dbda4cad9420e8ca0e235,
+    type: 3}
+  shipToCharge: {fileID: 1900118445}
 --- !u!1 &402658525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,7 +1226,7 @@ GameObject:
   - component: {fileID: 500384449}
   - component: {fileID: 500384448}
   m_Layer: 5
-  m_Name: Ship C
+  m_Name: Ship E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1184,7 +1271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 57e95bbba00a1474783697830b37b15b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f5fa2a3ac0681a34e939196aa0ce2dd9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1285,6 +1372,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &519949380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519949381}
+  - component: {fileID: 519949383}
+  - component: {fileID: 519949382}
+  m_Layer: 5
+  m_Name: Star_image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &519949381
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519949380}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1346433016}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 100, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &519949382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519949380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 738fdb4c23ff02446a75da516a8a48bd, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &519949383
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519949380}
+  m_CullTransparentMesh: 0
 --- !u!1 &608721476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1625,7 @@ RectTransform:
   m_Children:
   - {fileID: 1367257539}
   - {fileID: 1051513454}
+  - {fileID: 1346433016}
   m_Father: {fileID: 33058685}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1521,7 +1683,7 @@ GameObject:
   - component: {fileID: 875213109}
   - component: {fileID: 875213108}
   m_Layer: 5
-  m_Name: Ship L
+  m_Name: Ship B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1566,7 +1728,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 57613f462f2250142932d1430707d6ae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 78d023b6859c8d745b06cb2615c7f3f5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1663,7 +1825,7 @@ GameObject:
   - component: {fileID: 887981627}
   - component: {fileID: 887981626}
   m_Layer: 5
-  m_Name: Ship J
+  m_Name: Ship A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1708,7 +1870,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4aae5255a58c42d4daa0af1d7862910b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: be568d69a8008a74dad75cb952ca72f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2066,6 +2228,7 @@ GameObject:
   - component: {fileID: 979308683}
   - component: {fileID: 979308682}
   - component: {fileID: 979308681}
+  - component: {fileID: 979308684}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2136,7 +2299,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 979308682}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 979308684}
+        m_MethodName: CheckPurchase
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &979308682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2174,6 +2348,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979308679}
   m_CullTransparentMesh: 0
+--- !u!114 &979308684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979308679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftShipPrefab: {fileID: 5634579150054830991, guid: 8aea87f1711af67489abf5d36d214660,
+    type: 3}
+  RightShipPrefab: {fileID: 8275600475488754385, guid: 3005854f4a4dbda4cad9420e8ca0e235,
+    type: 3}
+  shipToCharge: {fileID: 887981624}
 --- !u!1 &987210703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,7 +2514,7 @@ GameObject:
   - component: {fileID: 1051513456}
   - component: {fileID: 1051513455}
   m_Layer: 5
-  m_Name: QuitButton (1)
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2807,6 +2998,141 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236711615}
   m_CullTransparentMesh: 0
+--- !u!1 &1346433015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1346433016}
+  - component: {fileID: 1346433018}
+  - component: {fileID: 1346433017}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1346433016
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346433015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 519949381}
+  m_Father: {fileID: 749692059}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 850}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1346433017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346433015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'X '
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 561e6899570784646a636ca7247061ab, type: 2}
+  m_sharedMaterial: {fileID: -3108129072837774134, guid: 561e6899570784646a636ca7247061ab,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 64
+  m_fontSizeBase: 64
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1346433018
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346433015}
+  m_CullTransparentMesh: 0
 --- !u!1 &1350448959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2819,7 +3145,7 @@ GameObject:
   - component: {fileID: 1350448962}
   - component: {fileID: 1350448961}
   m_Layer: 5
-  m_Name: Ship A
+  m_Name: Ship C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2864,7 +3190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 617e3a261a7d47e4585d26705c60d853, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 44fcac76fdbf8df4fb24f315fa492397, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3428,6 +3754,7 @@ GameObject:
   - component: {fileID: 1684748034}
   - component: {fileID: 1684748033}
   - component: {fileID: 1684748032}
+  - component: {fileID: 1684748035}
   m_Layer: 5
   m_Name: Button (5)
   m_TagString: Untagged
@@ -3498,7 +3825,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1684748033}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1684748035}
+        m_MethodName: CheckPurchase
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1684748033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3536,6 +3874,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684748030}
   m_CullTransparentMesh: 0
+--- !u!114 &1684748035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684748030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftShipPrefab: {fileID: 5634579150054830991, guid: 8aea87f1711af67489abf5d36d214660,
+    type: 3}
+  RightShipPrefab: {fileID: 8275600475488754385, guid: 3005854f4a4dbda4cad9420e8ca0e235,
+    type: 3}
+  shipToCharge: {fileID: 41302746}
 --- !u!1 &1726102650
 GameObject:
   m_ObjectHideFlags: 0
@@ -3758,6 +4113,7 @@ GameObject:
   - component: {fileID: 1847642448}
   - component: {fileID: 1847642447}
   - component: {fileID: 1847642446}
+  - component: {fileID: 1847642449}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -3828,7 +4184,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1847642447}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1847642449}
+        m_MethodName: CheckPurchase
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1847642447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3866,6 +4233,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847642444}
   m_CullTransparentMesh: 0
+--- !u!114 &1847642449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847642444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftShipPrefab: {fileID: 5634579150054830991, guid: 8aea87f1711af67489abf5d36d214660,
+    type: 3}
+  RightShipPrefab: {fileID: 8275600475488754385, guid: 3005854f4a4dbda4cad9420e8ca0e235,
+    type: 3}
+  shipToCharge: {fileID: 1350448959}
 --- !u!1 &1900118445
 GameObject:
   m_ObjectHideFlags: 0
@@ -3878,7 +4262,7 @@ GameObject:
   - component: {fileID: 1900118448}
   - component: {fileID: 1900118447}
   m_Layer: 5
-  m_Name: Ship B
+  m_Name: Ship D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3923,7 +4307,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2b3c225aa96b8dc4f91c6205d557a7c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb333bba8bbc1f642b765705f929f1bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
