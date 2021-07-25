@@ -28,6 +28,10 @@ public class GameManager : Singleton<GameManager>
     {
         OnServerLogin += LoadServerData;
     }
+    private void OnDestroy()
+    {
+        OnServerLogin -= LoadServerData;
+    }
 
     #region LOGIN
 

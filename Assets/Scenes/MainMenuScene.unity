@@ -580,11 +580,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftShipPrefab: {fileID: 5634579150054830991, guid: 8aea87f1711af67489abf5d36d214660,
-    type: 3}
-  RightShipPrefab: {fileID: 8275600475488754385, guid: 3005854f4a4dbda4cad9420e8ca0e235,
-    type: 3}
-  shipToCharge: {fileID: 875213106}
 --- !u!1 &295069848
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,11 +735,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftShipPrefab: {fileID: 5634579150054830991, guid: 8aea87f1711af67489abf5d36d214660,
-    type: 3}
-  RightShipPrefab: {fileID: 8275600475488754385, guid: 3005854f4a4dbda4cad9420e8ca0e235,
-    type: 3}
-  shipToCharge: {fileID: 500384446}
 --- !u!1 &390023398
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,11 +890,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftShipPrefab: {fileID: 5634579150054830991, guid: 8aea87f1711af67489abf5d36d214660,
-    type: 3}
-  RightShipPrefab: {fileID: 8275600475488754385, guid: 3005854f4a4dbda4cad9420e8ca0e235,
-    type: 3}
-  shipToCharge: {fileID: 1900118445}
 --- !u!1 &402658525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2402,11 +2387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftShipPrefab: {fileID: 5634579150054830991, guid: 8aea87f1711af67489abf5d36d214660,
-    type: 3}
-  RightShipPrefab: {fileID: 8275600475488754385, guid: 3005854f4a4dbda4cad9420e8ca0e235,
-    type: 3}
-  shipToCharge: {fileID: 887981624}
 --- !u!1 &987210703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2692,6 +2672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1111178853}
+  - component: {fileID: 1111178854}
   m_Layer: 0
   m_Name: PlayfabManager
   m_TagString: Untagged
@@ -2713,6 +2694,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1111178854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111178852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a8a0649ed1c204899f463be1f5575d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isTest: 1
 --- !u!1 &1117154024
 GameObject:
   m_ObjectHideFlags: 0
@@ -3982,11 +3976,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftShipPrefab: {fileID: 5634579150054830991, guid: 8aea87f1711af67489abf5d36d214660,
-    type: 3}
-  RightShipPrefab: {fileID: 8275600475488754385, guid: 3005854f4a4dbda4cad9420e8ca0e235,
-    type: 3}
-  shipToCharge: {fileID: 41302746}
 --- !u!1 &1726102650
 GameObject:
   m_ObjectHideFlags: 0
@@ -4352,11 +4341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftShipPrefab: {fileID: 5634579150054830991, guid: 8aea87f1711af67489abf5d36d214660,
-    type: 3}
-  RightShipPrefab: {fileID: 8275600475488754385, guid: 3005854f4a4dbda4cad9420e8ca0e235,
-    type: 3}
-  shipToCharge: {fileID: 1350448959}
 --- !u!1 &1900118445
 GameObject:
   m_ObjectHideFlags: 0
@@ -4734,6 +4718,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac16b40379d230f4f9f47b054b67a437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameVersion: 
+  ServerEconomy:
+    MoneyBase: 0
+    MoneyRatio: 0
 --- !u!4 &2139179463
 Transform:
   m_ObjectHideFlags: 0

@@ -72,4 +72,27 @@ public class PlayfabManager : Singleton<PlayfabManager>
 
     #endregion
 
+    #region STORE
+
+    public void GetStoreItems(Action<List<StoreItem>> onSuccess, Action onError = null)
+    {
+        var request = new GetStoreItemsRequest()
+        {
+            CatalogVersion = "mainstore"
+        };
+
+        PlayFabClientAPI.GetStoreItems(request,
+            result =>
+            {
+                onSuccess(result.Store);
+            },
+            error =>
+            {
+                onError();
+            }
+            );
+    }
+
+    #endregion
+
 }
