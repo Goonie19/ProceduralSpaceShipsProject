@@ -49,4 +49,27 @@ public class PlayfabManager : Singleton<PlayfabManager>
 
     #endregion
 
+    #region CATALOG
+
+    public void GetCatalogItems(Action<List<CatalogItem>> onSuccess, Action onError = null)
+    {
+        var request = new GetCatalogItemsRequest()
+        {
+            CatalogVersion = "SpaceShipShop"
+        };
+
+        PlayFabClientAPI.GetCatalogItems(request,
+            result =>
+            {
+                onSuccess(result.Catalog);
+            },
+            error =>
+            {
+                onError();
+            }
+            );
+    }
+
+    #endregion
+
 }

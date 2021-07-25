@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartBehaviour : MonoBehaviour
+public class StarBehaviour : MonoBehaviour
 {
     public float speed;
 
