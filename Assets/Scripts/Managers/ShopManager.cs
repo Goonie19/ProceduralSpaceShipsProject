@@ -1,4 +1,5 @@
-﻿using PlayFab.ClientModels;
+﻿using PlayFab;
+using PlayFab.ClientModels;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -49,6 +50,28 @@ public class ShopManager : MonoBehaviour
     {
         foreach (CatalogItem item in CatalogItems)
             Debug.Log("[Catalog]: " + item.DisplayName);
+    }
+
+    public void PurchaseItem(StoreItem item, Action<List<ItemInstance>> onSuccess, Action onError = null)
+    {
+        var request = new PurchaseItemRequest()
+        {
+            CatalogVersion = "MainCatalog",
+            StoreId = "mainStore",
+            VirtualCurrency = "JA",
+            Price = (int)item.VirtualCurrencyPrices["JA"],
+            ItemId = item.ItemId
+        };
+
+        PlayFabClientAPI.PurchaseItem(request,
+            (result) =>
+            {
+                onSuccess(result.Items);
+            },
+            (error) =>
+            {
+                onError?.Invoke();
+            });
     }
 
 }
