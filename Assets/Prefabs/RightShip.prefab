@@ -4709,7 +4709,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 127040e03f5e55146a68e5b749f9db4c, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -4836,7 +4836,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &8275600475488754384
@@ -4848,12 +4848,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8275600475488754385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21300b1d83b5a524b9d3981d058c0a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 3036410747a17a44098f699eff964142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftPosition: {x: 0.6, y: -3.2}
-  rightPosition: {x: 1.7, y: -3.2}
-  duration: 0.35
+  leftPosition: {x: 0, y: 0}
+  rightPosition: {x: 0, y: 0}
+  duration: 0
   isOnRight: 1
 --- !u!61 &3766919781254621403
 BoxCollider2D:

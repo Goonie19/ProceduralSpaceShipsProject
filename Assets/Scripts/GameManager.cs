@@ -1,10 +1,94 @@
-﻿using System.Collections;
+﻿using PlayFab;
+using PlayFab.ClientModels;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Utils;
 
-public class GameManager : MonoBehaviour
-{    
+public class GameManager : Singleton<GameManager>
+{
+
+    public static event Action OnServerLogin;
+
+    #region DATA
+
+    public string GameVersion;
+    public EconomyModel ServerEconomy;
+
+    #endregion
+
+    private void Start()
+    {
+        ServerLogin();
+    }
+
+    private void Awake()
+    {
+        OnServerLogin += LoadServerData;
+    }
+
+    #region LOGIN
+
+    private void ServerLogin()
+    {
+
+        PlayfabManager.Instance.Login(
+            resultadoLogin =>
+            {
+                Debug.Log("User login: " + resultadoLogin.PlayFabId);
+                Debug.Log("User newly created: " + resultadoLogin.NewlyCreated);
+
+                OnServerLogin?.Invoke();
+            },
+            resultadoError =>
+            {
+                Debug.Log("Login failed: " + resultadoError.ErrorMessage);
+
+            }
+            );
+
+    }
+
+
+
+    #endregion
+
+    #region LOAD SERVER DATA
+
+    public void LoadServerData()
+    {
+        PlayfabManager.Instance.GetTitleData(
+            titleData =>
+            {
+                LoadGameSetup(titleData.Data);
+            },
+            error =>
+            {
+                Debug.Log("Get Title Data failed: " + error.ErrorMessage);
+            }
+            );
+    }
+
+    private void LoadGameSetup(Dictionary<string, string> data)
+    {
+        SetPlayfabVersion(data["ClientVersion"]);
+        SetPlayfabEconomyModel(data["EconomySetup"]);
+    }
+
+    private void SetPlayfabVersion(string version)
+    {
+        GameVersion = version;
+    }
+
+    private void SetPlayfabEconomyModel(string economyJson)
+    {
+        JsonUtility.FromJsonOverwrite(economyJson, ServerEconomy);
+    }
+
+    #endregion
+
     public void LoadScene(int index)
     {
         SceneManager.LoadScene(index);
@@ -31,4 +115,6 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
     }
+
+    
 }

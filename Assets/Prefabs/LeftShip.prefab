@@ -4709,7 +4709,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 679406f660f28834ba43ee5ac2bf101c, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -4836,7 +4836,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5634579150054830988
@@ -4848,12 +4848,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5634579150054830991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6410a37cc0d08884abd8749597db3320, type: 3}
+  m_Script: {fileID: 11500000, guid: defffb5afcecee2489debfe2bbfb6eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftPosition: {x: -1.7, y: -3.2}
-  rightPosition: {x: -0.6, y: -3.2}
-  duration: 0.35
+  leftPosition: {x: 0, y: 0}
+  rightPosition: {x: 0, y: 0}
+  duration: 0
   isOnleft: 1
   posToSpawn: {fileID: 0}
 --- !u!61 &8460349249567672479
