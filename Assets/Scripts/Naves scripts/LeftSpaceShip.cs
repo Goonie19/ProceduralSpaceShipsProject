@@ -22,10 +22,17 @@ public class LeftSpaceShip : MonoBehaviour
     public bool isOnleft = true;
     public Transform posToSpawn;
 
+    //Audio feedback
+    [Header("Audio")]
+    private AudioSource source;
+    public AudioClip starClip;
+    public AudioClip meteorClip;
+
     private void Start()
     {
         transform.position = leftPosition;
         _particleSystem = GetComponentInChildren<ParticleSystem>();
+        source = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -105,10 +112,14 @@ public class LeftSpaceShip : MonoBehaviour
     {
         if (collision.GetComponent<MeteorBehaviour>().data.obstacle)
         {
+            source.clip = meteorClip;
+            source.Play();
             ScoreManager.Instance.GameOver();
         }
         else
         {
+            source.clip = starClip;
+            source.Play();
             ScoreManager.Instance.AddScore();
             collision.gameObject.transform.position = posToSpawn.position;
         }

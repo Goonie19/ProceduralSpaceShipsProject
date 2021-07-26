@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7392413969619463230}
   - component: {fileID: 7392413969619463228}
-  - component: {fileID: 7392413969619463231}
+  - component: {fileID: 8108912407532222776}
   m_Layer: 0
   m_Name: MeteorSpawner
   m_TagString: Untagged
@@ -58,7 +58,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4977608, y: 1.9504662}
   m_EdgeRadius: 0
---- !u!114 &7392413969619463231
+--- !u!114 &8108912407532222776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7392413969619463229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e0fcd05eb38df54a9701b29e115ddf9, type: 3}
+  m_Script: {fileID: 11500000, guid: f0b4c9e6801040044924dd8c16251fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Spawns:
@@ -75,10 +75,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  SpeedSQRT: 3.5
+  SpeedSQRT: 1.5
   MeteorTypes:
-  - {fileID: 11400000, guid: e3f97371da70df74883db123e601b7ea, type: 2}
-  - {fileID: 11400000, guid: 185b411187c9bc242875c82feb0c245d, type: 2}
+  - {fileID: 11400000, guid: a8b1aa0bf97e8cf49858f5833a6bcc7b, type: 2}
+  - {fileID: 11400000, guid: 056c7e03e90ca014eb5b2e43b0badd53, type: 2}
   pool:
   - {fileID: 0}
   - {fileID: 0}

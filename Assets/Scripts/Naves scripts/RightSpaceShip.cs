@@ -20,10 +20,17 @@ public class RightSpaceShip : MonoBehaviour
     private Vector3 flip = new Vector3(0f, 90f, 0f);
     public bool isOnRight = true;
 
+    //Audio feedback
+    [Header("Audio")]
+    private AudioSource source;
+    public AudioClip starClip;
+    public AudioClip meteorClip;
+
     private void Start()
     {
         transform.position = rightPosition;
         _particleSystem = GetComponentInChildren<ParticleSystem>();
+        source = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -102,11 +109,15 @@ public class RightSpaceShip : MonoBehaviour
     {
         if (collision.GetComponent<MeteorBehaviour>().data.obstacle)
         {
+            source.clip = meteorClip;
+            source.Play();
             ScoreManager.Instance.GameOver();
             collision.gameObject.SetActive(false);
         }
         else
         {
+            source.clip = starClip;
+            source.Play();
             ScoreManager.Instance.AddScore();
             collision.gameObject.SetActive(false);
         }
