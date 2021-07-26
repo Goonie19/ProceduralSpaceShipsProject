@@ -4,18 +4,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utils;
 
-public class ShopManager : MonoBehaviour
+public class ShopManager : Singleton<ShopManager>
 {
 
     public List<CatalogItem> CatalogItems;
     public List<StoreItem> StoreItems;
+    public List<ItemInstance> Inventory;
+    public int Stars;
 
 
     private void Awake()
     {
         GameManager.OnServerLogin += LoadCatalog;
         GameManager.OnServerLogin += LoadStore;
+        GameManager.OnServerLogin += LoadInventory;
+
 
     }
 
@@ -23,6 +28,7 @@ public class ShopManager : MonoBehaviour
     {
         GameManager.OnServerLogin -= LoadCatalog;
         GameManager.OnServerLogin -= LoadStore;
+        GameManager.OnServerLogin -= LoadInventory;
 
     }
 
@@ -46,6 +52,17 @@ public class ShopManager : MonoBehaviour
             });
     }
 
+    private void LoadInventory()
+    {
+        PlayfabManager.Instance.GetInventory(
+            inventory =>
+            {
+                Inventory = inventory.Inventory;
+                Stars = inventory.VirtualCurrency["JA"];
+            }
+            );
+    }
+
     private void ShowCatalog()
     {
         foreach (CatalogItem item in CatalogItems)
@@ -56,8 +73,8 @@ public class ShopManager : MonoBehaviour
     {
         var request = new PurchaseItemRequest()
         {
-            CatalogVersion = "MainCatalog",
-            StoreId = "mainStore",
+            CatalogVersion = "SpaceShipShop",
+            StoreId = "mainstore",
             VirtualCurrency = "JA",
             Price = (int)item.VirtualCurrencyPrices["JA"],
             ItemId = item.ItemId

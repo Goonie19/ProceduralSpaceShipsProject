@@ -78,7 +78,8 @@ public class PlayfabManager : Singleton<PlayfabManager>
     {
         var request = new GetStoreItemsRequest()
         {
-            CatalogVersion = "mainstore"
+            StoreId = "mainstore",
+            
         };
 
         PlayFabClientAPI.GetStoreItems(request,
@@ -88,10 +89,31 @@ public class PlayfabManager : Singleton<PlayfabManager>
             },
             error =>
             {
-                onError();
+                onError?.Invoke();
             }
             );
     }
+
+    #endregion
+
+    #region INVENTORY
+
+    public void GetInventory(Action<GetUserInventoryResult> onSuccess, Action onError = null) 
+    {
+        var request = new GetUserInventoryRequest();
+
+        PlayFabClientAPI.GetUserInventory(request,
+            result =>
+            {
+                ShopManager.Instance.Stars = result.VirtualCurrency["JA"];
+                onSuccess(result);
+            },
+            error =>
+            {
+                onError?.Invoke();
+            }
+            );
+    } 
 
     #endregion
 
