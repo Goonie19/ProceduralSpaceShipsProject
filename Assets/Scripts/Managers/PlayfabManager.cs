@@ -128,6 +128,7 @@ public class PlayfabManager : Singleton<PlayfabManager>
         PlayFabClientAPI.AddUserVirtualCurrency(request, 
             result =>
             {
+                ShopManager.Instance.Stars += amount;
                 onSuccess(result);
             },
             error =>
