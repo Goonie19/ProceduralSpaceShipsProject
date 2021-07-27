@@ -303,7 +303,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -577,9 +577,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 129144530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
+  m_Script: {fileID: 11500000, guid: b94d82f279a4a7247a1bbbbf6af013fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeftShipPrefab: {fileID: 5634579150054830991, guid: 0cbd961eecace0e48a7a0295083752f4,
+    type: 3}
+  RightShipPrefab: {fileID: 8275600475488754385, guid: d4167cd3511645b4696ae981a7eb6365,
+    type: 3}
+  shipID: Ship L
+  shipToCharge: {fileID: 875213106}
 --- !u!1 &295069848
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,9 +738,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 295069848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
+  m_Script: {fileID: 11500000, guid: b94d82f279a4a7247a1bbbbf6af013fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeftShipPrefab: {fileID: 5634579150054830991, guid: 0cbd961eecace0e48a7a0295083752f4,
+    type: 3}
+  RightShipPrefab: {fileID: 8275600475488754385, guid: d4167cd3511645b4696ae981a7eb6365,
+    type: 3}
+  shipID: Ship C
+  shipToCharge: {fileID: 500384446}
 --- !u!1 &390023398
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,9 +899,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 390023398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
+  m_Script: {fileID: 11500000, guid: b94d82f279a4a7247a1bbbbf6af013fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeftShipPrefab: {fileID: 5634579150054830991, guid: 0cbd961eecace0e48a7a0295083752f4,
+    type: 3}
+  RightShipPrefab: {fileID: 8275600475488754385, guid: d4167cd3511645b4696ae981a7eb6365,
+    type: 3}
+  shipID: Ship B
+  shipToCharge: {fileID: 1900118445}
 --- !u!1 &402658525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2369,7 +2387,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 30
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4026,9 +4044,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1684748030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
+  m_Script: {fileID: 11500000, guid: b94d82f279a4a7247a1bbbbf6af013fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeftShipPrefab: {fileID: 5634579150054830991, guid: 0cbd961eecace0e48a7a0295083752f4,
+    type: 3}
+  RightShipPrefab: {fileID: 8275600475488754385, guid: d4167cd3511645b4696ae981a7eb6365,
+    type: 3}
+  shipID: Ship D
+  shipToCharge: {fileID: 41302746}
 --- !u!1 &1726102650
 GameObject:
   m_ObjectHideFlags: 0
@@ -4391,9 +4415,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1847642444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03004bfe58a7d1b4ba1df6d3fcb73452, type: 3}
+  m_Script: {fileID: 11500000, guid: b94d82f279a4a7247a1bbbbf6af013fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeftShipPrefab: {fileID: 5634579150054830991, guid: 0cbd961eecace0e48a7a0295083752f4,
+    type: 3}
+  RightShipPrefab: {fileID: 8275600475488754385, guid: d4167cd3511645b4696ae981a7eb6365,
+    type: 3}
+  shipID: Ship A
+  shipToCharge: {fileID: 1350448959}
 --- !u!1 &1900118445
 GameObject:
   m_ObjectHideFlags: 0
@@ -4852,10 +4882,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3004446466607771986, guid: 8c16768dc4fbafc44bbdef3c72b767c7,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.745
+      objectReference: {fileID: 0}
     - target: {fileID: 3004446466607771997, guid: 8c16768dc4fbafc44bbdef3c72b767c7,
         type: 3}
       propertyPath: m_Name
       value: MusicManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3004446466607771997, guid: 8c16768dc4fbafc44bbdef3c72b767c7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c16768dc4fbafc44bbdef3c72b767c7, type: 3}

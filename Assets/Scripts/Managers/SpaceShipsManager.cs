@@ -31,12 +31,11 @@ public class SpaceShipsManager : MonoBehaviour
     {
         if (!isPurchased)
         {
-            //int coinStars = PlayerPrefs.GetInt("Stored score"); //Almacenamos las estrellas acumuladas
             int coinStars = ShopManager.Instance.Stars;
+            
             if (coinStars >= shipAmount) //Comprobamos si tienes mas monedas o las mismas que vale la nave
             {
-
-                GetID();
+                GetID(shipAmount);
                 ShipPurchased();
             }
             else
@@ -64,13 +63,15 @@ public class SpaceShipsManager : MonoBehaviour
         ChargeShipInPrefab();
     }
 
-    private void GetID()
+    private void GetID(int amount)
     {
         ShopManager.Instance.PurchaseItem(ShopManager.Instance.SearchID(shipID),
             result =>
             {
                 Debug.Log("Funcionó");
             });
+        Debug.Log("Coste: " + amount);
+        GameManager.Instance.UpdateStarsOfServer2(amount);
         ShopManager.Instance.LoadCatalog();
         ShopManager.Instance.LoadInventory();
         ShopManager.Instance.LoadStore();

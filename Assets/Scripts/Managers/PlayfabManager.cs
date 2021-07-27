@@ -139,4 +139,26 @@ public class PlayfabManager : Singleton<PlayfabManager>
             );
     }
 
+    public void UpdateStars2(int amount, Action<ModifyUserVirtualCurrencyResult> onSuccess, Action<PlayFabError> onError = null)
+    {
+        var request = new SubtractUserVirtualCurrencyRequest()
+        {
+            Amount = amount,
+            VirtualCurrency = "JA"
+        };
+
+        PlayFabClientAPI.SubtractUserVirtualCurrency(request,
+            result =>
+            {
+                ShopManager.Instance.Stars -= amount;
+                onSuccess(result);
+            },
+            error =>
+            {
+                Debug.Log("Not added stars");
+                onError(error);
+            }
+            );
+    }
+
 }

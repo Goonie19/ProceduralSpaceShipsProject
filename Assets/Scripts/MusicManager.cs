@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Utils;
 
-public class MusicManager : Singleton<MusicManager>
+public class MusicManager : MonoBehaviour
 {
     private AudioSource source;
+
+    private bool init = false;
 
     void Awake()
     {
@@ -16,10 +18,5 @@ public class MusicManager : Singleton<MusicManager>
     {
         source.Play();
         DontDestroyOnLoad(gameObject);
-    }
-
-    public void DestroyMusic()
-    {
-        Destroy(gameObject);
     }
 }

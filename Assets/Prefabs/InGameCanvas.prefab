@@ -585,6 +585,7 @@ GameObject:
   - component: {fileID: 8443365470673229873}
   - component: {fileID: 8443365470673229872}
   - component: {fileID: 8443365470673229875}
+  - component: {fileID: 1898878193}
   m_Layer: 5
   m_Name: HomeBUtton
   m_TagString: Untagged
@@ -691,6 +692,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1898878193}
+        m_MethodName: DestroyMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 0}
         m_MethodName: LoadScene
         m_Mode: 3
@@ -702,6 +714,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1898878193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8443365470673229877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e20d8d18f5f8f341b47bb4c196c095f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8443365470715966675
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,6 +1508,7 @@ GameObject:
   - component: {fileID: 8443365472106741366}
   - component: {fileID: 8443365472106741641}
   - component: {fileID: 8443365472106741640}
+  - component: {fileID: 604783245}
   m_Layer: 5
   m_Name: HomeBUtton
   m_TagString: Untagged
@@ -1590,6 +1615,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 604783245}
+        m_MethodName: DestroyMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 0}
         m_MethodName: LoadScene
         m_Mode: 3
@@ -1601,6 +1637,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &604783245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8443365472106741642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e20d8d18f5f8f341b47bb4c196c095f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8443365472188808036
 GameObject:
   m_ObjectHideFlags: 0

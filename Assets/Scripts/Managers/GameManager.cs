@@ -107,6 +107,18 @@ public class GameManager : Singleton<GameManager>
             );
     }
 
+    public void UpdateStarsOfServer2(int amount)
+    {
+        PlayfabManager.Instance.UpdateStars2(amount, stars =>
+        {
+            Debug.Log("Se actualizo con exito");
+        },
+        error =>
+        {
+            Debug.Log(error.ErrorMessage);
+        }
+            );
+    }
     #endregion
 
     public void LoadScene(int index)

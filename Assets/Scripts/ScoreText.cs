@@ -8,9 +8,13 @@ public class ScoreText : MonoBehaviour
     private TextMeshProUGUI scoreText;
     private int storedScore;
 
+    private void Awake()
+    {
+        scoreText = GetComponent<TextMeshProUGUI>();       
+    }
+
     private void Start()
     {
-        scoreText = GetComponent<TextMeshProUGUI>();
         UpdateScoreText();
     }
 

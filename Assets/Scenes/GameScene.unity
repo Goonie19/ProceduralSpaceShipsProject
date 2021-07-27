@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 121351109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 1982966759}
   m_Father: {fileID: 1090011930}
@@ -318,7 +318,7 @@ Transform:
   m_GameObject: {fileID: 212835795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 1234133924}
   m_Father: {fileID: 1090011930}
@@ -565,7 +565,7 @@ Transform:
   m_GameObject: {fileID: 312833438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 248591277}
   m_Father: {fileID: 1090011930}
@@ -650,7 +650,7 @@ Transform:
   m_GameObject: {fileID: 419454570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 1729846901}
   m_Father: {fileID: 1090011930}
@@ -719,6 +719,11 @@ PrefabInstance:
       propertyPath: posToSpawn
       value: 
       objectReference: {fileID: 724026059}
+    - target: {fileID: 5634579150054830988, guid: 0cbd961eecace0e48a7a0295083752f4,
+        type: 3}
+      propertyPath: duration
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5634579150054830989, guid: 0cbd961eecace0e48a7a0295083752f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -883,7 +888,7 @@ Transform:
   m_GameObject: {fileID: 555129653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 815933193}
   m_Father: {fileID: 1090011930}
@@ -1035,51 +1040,15 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1781989412}
-    - target: {fileID: 8443365470202591212, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PauseGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 8443365470673229875, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8443365470673229875, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1781989412}
-    - target: {fileID: 8443365470673229875, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 8443365470673229875, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8443365470673229875, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8443365470673229875, guid: 649aecfb832079a4386d1eaa498190e1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 3004446466607771987, guid: 8c16768dc4fbafc44bbdef3c72b767c7,
+      objectReference: {fileID: 1781989412}
+    - target: {fileID: 8443365470715966673, guid: 649aecfb832079a4386d1eaa498190e1,
         type: 3}
-    - target: {fileID: 8443365470673229875, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: DestroyMusic
-      objectReference: {fileID: 0}
-    - target: {fileID: 8443365470673229875, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8443365470715966675, guid: 649aecfb832079a4386d1eaa498190e1,
         type: 3}
@@ -1196,62 +1165,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1781989412}
-    - target: {fileID: 8443365471602165154, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ResumeGame
-      objectReference: {fileID: 0}
     - target: {fileID: 8443365472033652178, guid: 649aecfb832079a4386d1eaa498190e1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1781989412}
-    - target: {fileID: 8443365472033652178, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ReloadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 8443365472106741640, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8443365472106741640, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1781989412}
-    - target: {fileID: 8443365472106741640, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 8443365472106741640, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8443365472106741640, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8443365472106741640, guid: 649aecfb832079a4386d1eaa498190e1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 3004446466607771987, guid: 8c16768dc4fbafc44bbdef3c72b767c7,
-        type: 3}
-    - target: {fileID: 8443365472106741640, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: DestroyMusic
-      objectReference: {fileID: 0}
-    - target: {fileID: 8443365472106741640, guid: 649aecfb832079a4386d1eaa498190e1,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1781989412}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 649aecfb832079a4386d1eaa498190e1, type: 3}
 --- !u!1 &660933971
@@ -1732,7 +1655,7 @@ Transform:
   m_GameObject: {fileID: 979606794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 689238624}
   m_Father: {fileID: 1090011930}
@@ -1982,7 +1905,7 @@ Transform:
   m_GameObject: {fileID: 1159728448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 660933972}
   m_Father: {fileID: 1090011930}
@@ -2016,7 +1939,7 @@ Transform:
   m_GameObject: {fileID: 1175677565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 1903235266}
   m_Father: {fileID: 1090011930}
@@ -2427,7 +2350,7 @@ Transform:
   m_GameObject: {fileID: 1753928720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 888133295}
   m_Father: {fileID: 1090011930}
@@ -2752,8 +2675,14 @@ PrefabInstance:
     - target: {fileID: 8108912407532222776, guid: a28b0cf91ff2ed94ca224193938f5635,
         type: 3}
       propertyPath: SpeedSQRT
-      value: 5
+      value: 3.25
       objectReference: {fileID: 0}
+    - target: {fileID: 8108912407532222776, guid: a28b0cf91ff2ed94ca224193938f5635,
+        type: 3}
+      propertyPath: MeteorTypes.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a8b1aa0bf97e8cf49858f5833a6bcc7b,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a28b0cf91ff2ed94ca224193938f5635, type: 3}
 --- !u!1 &1982966758

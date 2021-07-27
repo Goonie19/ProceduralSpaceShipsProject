@@ -74,7 +74,8 @@ public class RightSpaceShip : MonoBehaviour
 
         seq.Append(transform.DOMoveX(rightPosition.x, duration)
             .SetEase(Ease.Linear));
-        seq.Join(Flip());
+        seq.Join(transform.DORotate(new Vector3(0f, 0f, 0f), duration)
+            .SetEase(Ease.Linear));
 
         return seq;
     }
@@ -85,20 +86,7 @@ public class RightSpaceShip : MonoBehaviour
 
         seq.Append(transform.DOMoveX(leftPosition.x, duration)
             .SetEase(Ease.Linear));
-        seq.Join(Flip());
-
-        return seq;
-    }
-
-    private Sequence Flip()
-    {
-        Sequence seq = DOTween.Sequence();
-
-        seq.Append(transform.DORotate(flip, duration / 2)
-            .SetRelative()
-            .SetEase(Ease.Linear));
-        seq.Append(transform.DORotate(-flip, duration / 2)
-            .SetRelative()
+        seq.Join(transform.DORotate(new Vector3(0f, 180f, 0f), duration)
             .SetEase(Ease.Linear));
 
         return seq;

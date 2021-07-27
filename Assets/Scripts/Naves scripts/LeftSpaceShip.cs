@@ -18,7 +18,7 @@ public class LeftSpaceShip : MonoBehaviour
 
     public Vector2 leftPosition, rightPosition;
     public float duration;
-    private Vector3 flip = new Vector3(0f, 90f, 0f);
+    private Vector3 flip = new Vector3(0f, 180f, 0f);
     public bool isOnleft = true;
     public Transform posToSpawn;
 
@@ -76,7 +76,8 @@ public class LeftSpaceShip : MonoBehaviour
 
         seq.Append(transform.DOMoveX(rightPosition.x, duration)
             .SetEase(Ease.Linear));
-        seq.Join(Flip());
+        seq.Join(transform.DORotate(new Vector3(0f, 180f, 0f), duration)
+            .SetEase(Ease.Linear));
 
         return seq;
     }
@@ -87,20 +88,7 @@ public class LeftSpaceShip : MonoBehaviour
 
         seq.Append(transform.DOMoveX(leftPosition.x, duration)
             .SetEase(Ease.Linear));
-        seq.Join(Flip());
-
-        return seq;
-    }
-
-    private Sequence Flip()
-    {
-        Sequence seq = DOTween.Sequence();
-
-        seq.Append(transform.DORotate(flip, duration / 2)
-            .SetRelative()
-            .SetEase(Ease.Linear));
-        seq.Append(transform.DORotate(-flip, duration / 2)
-            .SetRelative()
+        seq.Join(transform.DORotate(new Vector3(0f, 0f, 0f), duration)
             .SetEase(Ease.Linear));
 
         return seq;
