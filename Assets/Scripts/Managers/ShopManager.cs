@@ -32,7 +32,7 @@ public class ShopManager : Singleton<ShopManager>
 
     }
 
-    private void LoadCatalog()
+    public void LoadCatalog()
     {
         PlayfabManager.Instance.GetCatalogItems(
             catalog =>
@@ -43,7 +43,7 @@ public class ShopManager : Singleton<ShopManager>
             );
     }
 
-    private void LoadStore()
+    public void LoadStore()
     {
         PlayfabManager.Instance.GetStoreItems(
             store =>
@@ -52,7 +52,7 @@ public class ShopManager : Singleton<ShopManager>
             });
     }
 
-    private void LoadInventory()
+    public void LoadInventory()
     {
         PlayfabManager.Instance.GetInventory(
             inventory =>
@@ -89,6 +89,51 @@ public class ShopManager : Singleton<ShopManager>
             {
                 onError?.Invoke();
             });
+    }
+
+    public StoreItem SearchID(string ID)
+    {
+        int i = 0;
+        StoreItem item = null;
+
+        while (ID != StoreItems[i].ItemId && i<StoreItems.Count) {
+            if(ID == StoreItems[i].ItemId)
+            {
+                item = StoreItems[i];
+            }
+
+            i++;
+        }
+
+        if (ID == StoreItems[i].ItemId)
+        {
+            item = StoreItems[i];
+        }
+
+        return item;
+    }
+
+    public bool SearchInventory(string ID)
+    {
+        bool isPurchased = false;
+        int i = 0;
+
+        Debug.Log("Inventory count: " + Inventory.Count);
+        Debug.Log("ID: " + ID);
+
+        while (i < Inventory.Count && !isPurchased)
+        {
+            
+            Debug.Log("Inventory: " + Inventory[i].ItemId);
+            if (ID == Inventory[i].ItemId)
+            {
+                isPurchased = true;
+            }
+            Debug.Log(isPurchased);
+            i++;
+        }
+
+        return isPurchased;
     }
 
 }

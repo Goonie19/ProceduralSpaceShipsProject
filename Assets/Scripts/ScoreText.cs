@@ -16,7 +16,7 @@ public class ScoreText : MonoBehaviour
 
     public void UpdateScoreText()
     {
-        storedScore = PlayerPrefs.GetInt("Stored score");
+        storedScore = ShopManager.Instance.Stars;
 
         scoreText.text = "X  " + storedScore.ToString();
     }

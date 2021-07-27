@@ -17,4 +17,9 @@ public class MusicManager : Singleton<MusicManager>
         source.Play();
         DontDestroyOnLoad(gameObject);
     }
+
+    public void DestroyMusic()
+    {
+        Destroy(gameObject);
+    }
 }
