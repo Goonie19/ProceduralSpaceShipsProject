@@ -34,6 +34,7 @@ public class ScoreManager : Singleton<ScoreManager>
     public void AddScore()
     {
         currentScore++;
+        GameManager.Instance.UpdateStarsOfServer(1);
         currentScoreText.GetComponent<TextMeshProUGUI>().text = "X  " + currentScore.ToString();
     }
 

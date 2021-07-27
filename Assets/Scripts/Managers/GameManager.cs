@@ -99,7 +99,12 @@ public class GameManager : Singleton<GameManager>
         PlayfabManager.Instance.UpdateStars(amount, stars =>
         {
             Debug.Log("Se actualizo con exito");
-        });
+        },
+        error =>
+        {
+            Debug.Log(error.ErrorMessage);
+        }
+            );
     }
 
     #endregion

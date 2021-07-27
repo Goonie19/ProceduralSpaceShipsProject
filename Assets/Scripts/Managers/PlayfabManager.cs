@@ -117,7 +117,7 @@ public class PlayfabManager : Singleton<PlayfabManager>
 
     #endregion
 
-    public void UpdateStars(int amount, Action<ModifyUserVirtualCurrencyResult> onSuccess, Action onError = null)
+    public void UpdateStars(int amount, Action<ModifyUserVirtualCurrencyResult> onSuccess, Action<PlayFabError> onError = null)
     {
         var request = new AddUserVirtualCurrencyRequest()
         {
@@ -133,7 +133,8 @@ public class PlayfabManager : Singleton<PlayfabManager>
             },
             error =>
             {
-                onError?.Invoke();
+                Debug.Log("Not added stars");
+                onError(error);
             }
             );
     }
