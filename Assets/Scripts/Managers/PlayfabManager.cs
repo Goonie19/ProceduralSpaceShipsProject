@@ -117,4 +117,24 @@ public class PlayfabManager : Singleton<PlayfabManager>
 
     #endregion
 
+    public void UpdateStars(int amount, Action<ModifyUserVirtualCurrencyResult> onSuccess, Action onError = null)
+    {
+        var request = new AddUserVirtualCurrencyRequest()
+        {
+            Amount = amount,
+            VirtualCurrency = "JA"
+        };
+
+        PlayFabClientAPI.AddUserVirtualCurrency(request, 
+            result =>
+            {
+                onSuccess(result);
+            },
+            error =>
+            {
+                onError?.Invoke();
+            }
+            );
+    }
+
 }
